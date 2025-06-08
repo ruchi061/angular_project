@@ -1,7 +1,7 @@
 # Community-Driven Disaster Preparedness System
 
 ## 1. Project Objective
-The objective of this project is to develop a **Community-Driven Disaster Preparedness System** that enables communities to collaboratively prepare for natural disasters such as earthquakes, floods, and wildfires. The system allows users to contribute preparedness guides, track emergency resource availability, and coordinate response plans. This project will be built using **Rust** for the backend and **Angular** for the frontend.
+The objective of this project is to develop a **Community-Driven Disaster Preparedness System** that enables communities to collaboratively prepare for natural disasters such as earthquakes, floods, and wildfires. The system allows users to contribute preparedness guides, track emergency resource availability, and coordinate response plans. This project will be built using **Angular** for the frontend.
 
 ## 2. Project Scope
 The system will cater to multiple stakeholders:
@@ -67,24 +67,7 @@ The **Community-Driven Disaster Preparedness System** is designed to help commun
 
 ---
 
-## Roles and Responsibility
-
-- Authentication Module -> **Dhrupal Mavani, Dhruvi Shah**
-- Alert Module -> **Akshar Parekh, Khushi Shah**
-- Dashboard Module including SideBar and Navbar -> **Dhrupal Mavani, Dhruvi Shah**
-- GuideLine module add, edit with Requests -> **Akshar Parekh, Harsh Godkar**
-- Resource/Shelter Tracking with filtering feature -> **Khushi Shah, Rucha Jogsan**
-- Community Chat -> **Harsh Godkar, Rucha Jogsan**
-
 ## Installation & Setup
-### Prerequisites:
-- Rust & npm (for frontend)
-
-### Clone Repository:
-```sh
-git clone https://github.com/Akshar1199/Disaster_Preparedness.git
-cd Disaster_preparedness
-```
 
 
 ### Frontend Setup:
