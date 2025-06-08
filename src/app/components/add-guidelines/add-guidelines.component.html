@@ -1,0 +1,129 @@
+<div class="custom">
+  <form [formGroup]="guidelineForm" (ngSubmit)="onSubmit()">
+    <mat-card class="disaster-form-card">
+
+      <mat-card-title class="disaster-form-title">Disaster Data
+        Entry</mat-card-title>
+      <mat-card-subtitle class="disaster-form-subtitle">
+        Please fill out the required fields and guidelines below
+      </mat-card-subtitle>
+
+      <!-- <mat-divider></mat-divider> -->
+
+      <mat-card-content>
+
+        <div class="row">
+          <div class>
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Category</mat-label>
+              <input matInput formControlName="category"
+                placeholder="e.g. Earthquake" />
+            </mat-form-field>
+          </div>
+          <div class>
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Short Description</mat-label>
+              <textarea
+                matInput
+                formControlName="short_description"
+                placeholder="Enter a short description"></textarea>
+            </mat-form-field>
+          </div>
+          <div class>
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Effects</mat-label>
+              <textarea
+                matInput
+                formControlName="effects"
+                placeholder="Enter effects of the disaster"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <!-- <mat-divider></mat-divider> -->
+
+        <div class="guidelines-section">
+          <h3 class="section-title">Guidelines</h3>
+          <mat-divider></mat-divider>
+
+          <div formGroupName="guidelines" class="row">
+
+            <div formArrayName="do" class="column guidelines-column">
+              <h4>Do Guidelines</h4>
+              <div
+                *ngFor="let doCtrl of doControls.controls; let i = index"
+                class="guideline-row">
+                <mat-form-field appearance="fill" class="guideline-field">
+                  <mat-label>Do Guideline</mat-label>
+                  <input matInput [formControlName]="i"
+                    placeholder="Enter a guideline" />
+                </mat-form-field>
+                <button
+                  mat-icon-button
+                  color="warning"
+                  type="button"
+                  (click)="removeDo(i)"
+                  *ngIf="doControls.length > 1">
+                  <mat-icon>remove_circle</mat-icon>
+                </button>
+              </div>
+              <button
+                mat-raised-button
+                color="primary"
+                type="button"
+                (click)="addDo()"
+                class="add-guideline-button">
+                <mat-icon>add_circle</mat-icon>
+                Add Do Guideline
+              </button>
+            </div>
+
+            <div formArrayName="dont" class="column guidelines-column">
+              <h4>Don't Guidelines</h4>
+              <div
+                *ngFor="let dontCtrl of dontControls.controls; let i = index"
+                class="guideline-row">
+                <mat-form-field appearance="fill" class="guideline-field">
+                  <mat-label>Don't Guideline</mat-label>
+                  <input matInput [formControlName]="i"
+                    placeholder="Enter a guideline" />
+                </mat-form-field>
+                <button
+                  mat-icon-button
+                  color="warn"
+                  type="button"
+                  (click)="removeDont(i)"
+                  *ngIf="dontControls.length > 1">
+                  <mat-icon>remove_circle</mat-icon>
+                </button>
+              </div>
+              <button
+                mat-raised-button
+                color="primary"
+                type="button"
+                (click)="addDont()"
+                class="add-guideline-button">
+                <mat-icon>add_circle</mat-icon>
+                Add Don't Guideline
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="row single-column-row">
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>YouTube Link (optional)</mat-label>
+            <input matInput formControlName="linkUrl"
+              placeholder="https://youtu.be/..." />
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions class="actions-row">
+        <button mat-raised-button color="accent" type="submit" >Submit</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

@@ -1,0 +1,216 @@
+[
+  {
+    "disasters": [
+      {
+        "id": 1,
+        "category": "Earthquake",
+        "short_description": "A sudden and violent shaking of the ground, often causing destruction.",
+        "effects": "Building collapses, landslides, tsunamis, infrastructure damage.",
+        "guidelines": {
+          "do": [
+            "Drop, Cover, and Hold under a sturdy table.",
+            "Stay indoors until shaking stops.",
+            "Move to an open area away from buildings if outside.",
+            "Keep emergency supplies ready."
+          ],
+          "dont": [
+            "Don't use elevators.",
+            "Don't run outside immediately.",
+            "Don't stand near windows or heavy furniture.",
+            "Don't ignore aftershocks."
+          ]
+        },
+        "linkUrl": "https://youtu.be/BLEPakj1YTY?si=_Tf1WIW0NejRL2hY"
+      },
+      {
+        "id": 2,
+        "category": "Flood",
+        "short_description": "An overflow of water submerging land, often due to heavy rainfall or dam failures.",
+        "effects": "Property damage, displacement, waterborne diseases.",
+        "guidelines": {
+          "do": [
+            "Move to higher ground immediately.",
+            "Turn off electricity and gas.",
+            "Store clean drinking water.",
+            "Follow evacuation orders."
+          ],
+          "dont": [
+            "Don't walk or drive through floodwaters.",
+            "Don't touch electrical equipment in wet areas.",
+            "Don't drink contaminated water.",
+            "Don't ignore weather warnings."
+          ]
+        },
+        "linkUrl": "https://youtu.be/9hQZCiZ21fk?si=v2JvhD9u1tJTeW9z"
+      },
+      {
+        "id": 3,
+        "category": "Wildfire",
+        "short_description": "An uncontrolled fire in forested or grassland areas, spreading rapidly.",
+        "effects": "Air pollution, destruction of vegetation, wildlife loss, property damage.",
+        "guidelines": {
+          "do": [
+            "Evacuate immediately if advised.",
+            "Wear an N95 mask to reduce smoke inhalation.",
+            "Keep emergency supplies ready.",
+            "Clear dry leaves and flammable materials from surroundings."
+          ],
+          "dont": [
+            "Don't stay in smoke-filled areas.",
+            "Don't return to burned areas until safe.",
+            "Don't ignore evacuation warnings.",
+            "Don't leave campfires unattended."
+          ]
+        },
+        "linkUrl": "https://youtu.be/cNVZEVq3KzY?si=UNb_wvcoTAagBsQU"
+      },
+      {
+        "id": 4,
+        "category": "Tsunami",
+        "short_description": "A series of large ocean waves caused by underwater earthquakes or volcanic eruptions.",
+        "effects": "Severe flooding, coastal destruction, loss of life.",
+        "guidelines": {
+          "do": [
+            "Move to higher ground immediately.",
+            "Stay away from the coast until an official all-clear is given.",
+            "Listen to emergency alerts.",
+            "Keep an emergency kit ready."
+          ],
+          "dont": [
+            "Don't go near the shore to watch waves.",
+            "Don't ignore official warnings.",
+            "Don't delay evacuation.",
+            "Don't use coastal roads during warnings."
+          ]
+        },
+        "linkUrl": "https://youtu.be/m7EDddq9ftQ?si=CaHkH8SQa8yXtW63"
+      },
+      {
+        "id": 5,
+        "category": "Hurricane",
+        "short_description": "A powerful tropical storm with strong winds and heavy rain.",
+        "effects": "Storm surges, flooding, infrastructure damage, power outages.",
+        "guidelines": {
+          "do": [
+            "Secure doors and windows before the storm hits.",
+            "Stock up on food, water, and batteries.",
+            "Evacuate if instructed by authorities.",
+            "Stay indoors and away from windows."
+          ],
+          "dont": [
+            "Don't go outside during the storm.",
+            "Don't ignore evacuation orders.",
+            "Don't drive in flooded areas.",
+            "Don't use candles due to fire risk."
+          ]
+        },
+        "linkUrl": "https://youtu.be/wPDoIrGUrEc?si=lr0cFGs_8G-m4y6t"
+      },
+      {
+        "id": 6,
+        "category": "Tornado",
+        "short_description": "A rapidly rotating column of air extending from a thunderstorm to the ground.",
+        "effects": "Severe damage to buildings, vehicles, and trees.",
+        "guidelines": {
+          "do": [
+            "Take shelter in a basement or an interior room without windows.",
+            "Cover yourself with heavy furniture or a mattress.",
+            "Listen to weather alerts and warnings.",
+            "Secure outdoor objects that may become projectiles."
+          ],
+          "dont": [
+            "Don't stay in mobile homes or vehicles.",
+            "Don't try to outrun a tornado in a car.",
+            "Don't open windows to equalize pressure.",
+            "Don't ignore tornado sirens."
+          ]
+        },
+        "linkUrl": "https://youtu.be/wcTdLnrxznM?si=WA7MtfiTf3qIEsIM"
+      },
+      {
+        "id": 7,
+        "category": "Landslide",
+        "short_description": "A mass movement of rock, debris, or earth down a slope.",
+        "effects": "Burial of structures, road blockages, loss of life.",
+        "guidelines": {
+          "do": [
+            "Move to higher ground if in a landslide-prone area.",
+            "Stay alert to changes in water flow or cracks in walls.",
+            "Evacuate immediately if authorities advise.",
+            "Keep an emergency supply kit ready."
+          ],
+          "dont": [
+            "Don't build near steep slopes or unstable land.",
+            "Don't ignore warning signs like sudden cracks in the ground.",
+            "Don't remain in areas affected by recent heavy rains.",
+            "Don't return until authorities declare it safe."
+          ]
+        },
+        "linkUrl": "https://youtu.be/9j_StYqR_Pg?si=6KYEIk4VV7rFBpZz"
+      },
+      {
+        "id": 8,
+        "category": "Drought",
+        "short_description": "A prolonged period of insufficient rainfall, leading to water shortages.",
+        "effects": "Crop failures, water scarcity, food shortages, wildfires.",
+        "guidelines": {
+          "do": [
+            "Use water efficiently and avoid wastage.",
+            "Store emergency water supplies.",
+            "Follow government restrictions on water usage.",
+            "Grow drought-resistant plants in affected areas."
+          ],
+          "dont": [
+            "Don't waste drinking water.",
+            "Don't ignore water rationing rules.",
+            "Don't overuse groundwater sources.",
+            "Don't burn dry vegetation near homes."
+          ]
+        },
+        "linkUrl": "https://youtu.be/48OlDCI_Xrw?si=KeKtElRV8_TFvbQC"
+      },
+      {
+        "id": 9,
+        "category": "Pandemic",
+        "short_description": "A global disease outbreak affecting a large population.",
+        "effects": "High illness rates, economic impact, travel restrictions.",
+        "guidelines": {
+          "do": [
+            "Wear a mask in crowded places.",
+            "Wash hands frequently with soap and water.",
+            "Get vaccinated if available.",
+            "Maintain social distancing."
+          ],
+          "dont": [
+            "Don't spread misinformation.",
+            "Don't ignore public health advisories.",
+            "Don't stockpile essential supplies unnecessarily.",
+            "Don't travel unless necessary during outbreaks."
+          ]
+        },
+        "linkUrl": "https://youtu.be/P_VjnxHUoDY?si=eZ2AuymrBY-eOgz9"
+      },
+      {
+        "id": 10,
+        "category": "Volcanic Eruption",
+        "short_description": "A sudden explosion or release of lava and gases from a volcano.",
+        "effects": "Ashfall, lava flows, toxic gas emissions, earthquakes.",
+        "guidelines": {
+          "do": [
+            "Evacuate immediately if warned.",
+            "Wear a mask to prevent inhaling ash.",
+            "Stay indoors and keep windows closed.",
+            "Keep emergency supplies ready."
+          ],
+          "dont": [
+            "Don't stay near rivers or valleys during an eruption.",
+            "Don't ignore evacuation orders.",
+            "Don't inhale volcanic ash without protection.",
+            "Don't drink water from exposed sources."
+          ]
+        },
+        "linkUrl": "https://youtu.be/Z-w_z9yobpE?si=AlRIQKtdpn2gagIY"
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+
+.dialog-actions-wrapper {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Make it take full height of the parent */
+}
+.dialog-actions {
+  display: flex;
+  gap: 10px; /* Add some spacing between buttons */
+}
+.full-width {
+  width: 100%;
+}
+.title {
+
+  text-align: center; /* Center-align title */
+  padding-bottom: 16px; /* Add space below */
+  border-bottom: 2px solid #e0e0e0; /* Subtle bottom border */
+  margin-bottom: 20px; /* Space below border */
+}
+

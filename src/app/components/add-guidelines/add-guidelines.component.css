@@ -1,0 +1,106 @@
+.disaster-form-card {
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  background-color: #fafafa;
+
+  .mat-card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .mat-card-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+
+  &.single-column-row {
+    flex-direction: column;
+  }
+}
+
+.column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+.guidelines-section {
+  margin-top: 1rem;
+
+  .section-title {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .guidelines-column {
+    h4 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  .guideline-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .guideline-field {
+      flex: 1;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+
+.add-guideline-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-transform: none;
+
+
+  &:hover {
+    background-color: #2c88d9;
+  }
+}
+
+
+.actions-row {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.disaster-form-title{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.disaster-form-subtitle{
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+

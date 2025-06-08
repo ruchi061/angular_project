@@ -1,0 +1,124 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+app-sidebar {
+  flex-shrink: 0;
+}
+
+.dashboard-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.body-part {
+  background-color: rgba(205, 205, 205, 0.5);
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.heading2 {
+  color: rgb(73, 30, 7);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.all-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card-2 {
+  width: 280px;
+  height: 150px;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  color: #f2f3f4;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-2:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.3);
+  filter: brightness(1.3);
+}
+
+/* Background images for each disaster category */
+.card-2[data-category="Earthquake"] {
+  background-image: url("../../../assets/images/earthquake.jpg");
+}
+
+.card-2[data-category="Flood"] {
+  background-image: url("../../../assets/images/flood.png");
+}
+
+.card-2[data-category="Wildfire"] {
+  background-image: url("../../../assets/images/wildfire.png");
+}
+
+.card-2[data-category="Tsunami"] {
+  background-image: url("../../../assets/images/tsunami.png");
+}
+
+.card-2[data-category="Hurricane"] {
+  background-image: url("../../../assets/images/hurican.png");
+}
+
+.card-2[data-category="Tornado"] {
+  background-image: url("../../../assets/images/tornado.png");
+}
+
+.card-2[data-category="Landslide"] {
+  background-image: url("../../../assets/images/landslide.png");
+}
+
+.card-2[data-category="Drought"] {
+  background-image: url("../../../assets/images/drought.png");
+}
+
+.card-2[data-category="Pandemic"] {
+  background-image: url("../../../assets/images/pandamic.png");
+}
+
+.card-2[data-category="Volcanic Eruption"] {
+  background-image: url("../../../assets/images/volcano.png");
+}
+.category-name {
+  color: rgb(255, 255, 255);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-2 {
+    width: 150px;
+  }
+}

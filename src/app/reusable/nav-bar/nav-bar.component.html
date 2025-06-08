@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="navbar">
+  <button
+    mat-icon-button
+    (click)="toggleSidebar()"
+    class="menu-button"
+    *ngIf="!sidebarOpen"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span class="flex-spacer"></span>
+
+  <mat-form-field class="search-form-field" *ngIf="showSearch" style="margin-top:3px;">
+    <mat-label>Search Disasters</mat-label>
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput [(ngModel)]="searchQuery" (input)="onSearch()" />
+  </mat-form-field>
+
+  <span class="flex-spacer"></span>
+
+
+  <div class="alerts-section">
+    <a mat-list-item routerLink="/alerts" class="nav-item">
+      <mat-icon [matBadge]="length" matBadgeColor="warn" class="alert-icon">notifications</mat-icon>
+    </a>
+  </div>
+</mat-toolbar>

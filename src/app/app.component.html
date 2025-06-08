@@ -1,0 +1,27 @@
+<div
+  class="app-container"
+  [ngClass]="{
+    'sidebar-open': sidebarOpen,
+    'sidebar-closed': !sidebarOpen
+  }"
+>
+
+  <app-sidebar
+    [isOpen]="sidebarOpen"
+    (closeSidebar)="onCloseSidebar()"
+  ></app-sidebar>
+
+
+  <div class="main-content">
+
+    <app-nav-bar
+      [isOpen]="sidebarOpen"
+      (closeSidebar)="toggleSidebar()"
+    ></app-nav-bar>
+
+
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

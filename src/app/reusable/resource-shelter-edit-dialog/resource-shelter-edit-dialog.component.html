@@ -1,0 +1,70 @@
+<h2 mat-dialog-title class="dialog-title title">Edit {{ data.type }}</h2>
+<mat-dialog-content>
+  <form [formGroup]="editForm">
+    <mat-form-field appearance="outline" class="form-field full-width">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" required />
+    </mat-form-field>
+
+    <mat-form-field
+      *ngIf="data.type === 'resource'"
+      appearance="outline"
+      class="form-field full-width"
+    >
+      <mat-label>Quantity</mat-label>
+      <input matInput type="number" formControlName="quantity" required />
+    </mat-form-field>
+
+    <mat-form-field
+      *ngIf="data.type === 'shelter'"
+      appearance="outline"
+      class="form-field full-width"
+    >
+      <mat-label>Capacity</mat-label>
+      <input matInput type="number" formControlName="capacity" required />
+    </mat-form-field>
+
+    <mat-form-field
+      *ngIf="data.type === 'shelter'"
+      appearance="outline"
+      class="form-field full-width"
+    >
+      <mat-label>Available Beds</mat-label>
+      <input matInput type="number" formControlName="availableBeds" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field full-width">
+      <mat-label>Street</mat-label>
+      <input matInput formControlName="street" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field full-width">
+      <mat-label>District</mat-label>
+      <input matInput formControlName="district" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field full-width">
+      <mat-label>State</mat-label>
+      <input matInput formControlName="state" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field full-width">
+      <mat-label>Country</mat-label>
+      <input matInput formControlName="country" required />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<div class="dialog-actions-wrapper">
+  <mat-dialog-actions align="end">
+    <button mat-raised-button (click)="dialogRef.close()">Cancel</button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="saveChanges()"
+      [disabled]="editForm.invalid"
+    >
+      Save
+    </button>
+  </mat-dialog-actions>
+</div>

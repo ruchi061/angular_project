@@ -1,0 +1,172 @@
+<div class="container">
+
+  <mat-toolbar color="primary" class="mat-elevation-z8 toolbar-gradient">
+    <span class="toolbar-title">Resource & Shelter Tracking</span>
+    <span class="spacer"></span>
+  </mat-toolbar>
+
+
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-label>Search by Shelter-location/Resource</mat-label>
+    <input
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="Search Here..."
+    />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+
+
+  <mat-card class="table-card mat-elevation-z8">
+    <div class="card-header">
+      <h2 class="card-title">Available Resources</h2>
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="openAddResourceDialog()"
+        class="add-button"
+      >
+        <mat-icon>add</mat-icon> Add Resource
+      </button>
+    </div>
+    <table
+      mat-table
+      [dataSource]="dataSourceResources"
+      class="full-width-table"
+    >
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let resource">{{ resource.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef>Quantity</th>
+        <td mat-cell *matCellDef="let resource">{{ resource.quantity }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="location">
+        <th mat-header-cell *matHeaderCellDef>Location</th>
+        <td mat-cell *matCellDef="let resource">
+          {{
+            resource.location.street +
+              "," +
+              resource.location.district +
+              "," +
+              resource.location.state +
+              "," +
+              resource.location.country
+          }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let resource">
+          <button
+            mat-icon-button
+            color="primary"
+            (click)="editResource(resource)"
+            matTooltip="Edit"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="deleteResource(resource.id)"
+            matTooltip="Delete"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumnsResources"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumnsResources"></tr>
+    </table>
+    <mat-paginator
+      #paginatorResources
+      [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons
+    ></mat-paginator>
+  </mat-card>
+
+
+  <mat-divider class="gradient-divider"></mat-divider>
+
+
+  <mat-card class="table-card mat-elevation-z8">
+    <div class="card-header">
+      <h2 class="card-title">Available Shelters</h2>
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="openAddShelterDialog()"
+        class="add-button"
+      >
+        <mat-icon>add</mat-icon> Add Shelter
+      </button>
+    </div>
+    <table mat-table [dataSource]="dataSourceShelters" class="full-width-table">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let shelter">{{ shelter.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="availableBeds">
+        <th mat-header-cell *matHeaderCellDef>Available Beds</th>
+        <td mat-cell *matCellDef="let shelter">{{ shelter.availableBeds }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="capacity">
+        <th mat-header-cell *matHeaderCellDef>Capacity</th>
+        <td mat-cell *matCellDef="let shelter">{{ shelter.capacity }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="location">
+        <th mat-header-cell *matHeaderCellDef>Location</th>
+        <td mat-cell *matCellDef="let shelter">
+          {{
+            shelter.location.street +
+              "," +
+              shelter.location.district +
+              "," +
+              shelter.location.state +
+              "," +
+              shelter.location.country
+          }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let shelter">
+          <button
+            mat-icon-button
+            color="primary"
+            (click)="editShelter(shelter)"
+            matTooltip="Edit"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="deleteShelter(shelter.id)"
+            matTooltip="Delete"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumnsShelters"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumnsShelters"></tr>
+    </table>
+    <mat-paginator
+      #paginatorShelters
+      [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons
+    ></mat-paginator>
+  </mat-card>
+</div>

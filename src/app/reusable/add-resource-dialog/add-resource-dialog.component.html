@@ -1,0 +1,160 @@
+<div class="mat-typography">
+  <h2 mat-dialog-title class="dialog-title title">Add New Resource</h2>
+  <form
+    [formGroup]="resourceForm"
+    (ngSubmit)="onSubmit()"
+    class="resource-form"
+  >
+    <mat-dialog-content class="dialog-content">
+      <!-- Name Field -->
+      <mat-form-field appearance="outline" class="form-field full-width">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+        <mat-error *ngIf="resourceForm.get('name')?.hasError('required')"
+          >Name is required</mat-error
+        >
+        <mat-error *ngIf="resourceForm.get('name')?.hasError('minlength')"
+          >Minimum 2 characters required</mat-error
+        >
+        <mat-error *ngIf="resourceForm.get('name')?.hasError('maxlength')"
+          >Maximum 20 characters allowed</mat-error
+        >
+        <mat-error *ngIf="resourceForm.get('name')?.hasError('pattern')"
+          >Invalid characters (letters only)</mat-error
+        >
+      </mat-form-field>
+
+      <!-- Quantity Field -->
+      <mat-form-field appearance="outline" class="form-field full-width">
+        <mat-label>Quantity</mat-label>
+        <input matInput type="number" formControlName="quantity" />
+        <mat-error *ngIf="resourceForm.get('quantity')?.hasError('required')"
+          >Quantity is required</mat-error
+        >
+        <mat-error *ngIf="resourceForm.get('quantity')?.hasError('min')"
+          >Minimum value is 1</mat-error
+        >
+        <mat-error *ngIf="resourceForm.get('quantity')?.hasError('max')"
+          >Maximum value is 5000</mat-error
+        >
+        <mat-error *ngIf="resourceForm.get('quantity')?.hasError('pattern')"
+          >Only whole numbers allowed</mat-error
+        >
+      </mat-form-field>
+
+      <!-- Location Field (Nested FormGroup) -->
+      <div formGroupName="location">
+        <!-- Street -->
+        <mat-form-field appearance="outline" class="form-field full-width">
+          <mat-label>Street</mat-label>
+          <input matInput formControlName="street" />
+          <mat-error
+            *ngIf="resourceForm.get('location.street')?.hasError('required')"
+            >Street is required</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.street')?.hasError('minlength')"
+            >Minimum 3 characters required</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.street')?.hasError('maxlength')"
+            >Maximum 100 characters allowed</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.street')?.hasError('pattern')"
+            >Invalid characters</mat-error
+          >
+        </mat-form-field>
+
+        <!-- District -->
+        <mat-form-field appearance="outline" class="form-field full-width">
+          <mat-label>District</mat-label>
+          <input matInput formControlName="district" />
+          <mat-error
+            *ngIf="resourceForm.get('location.district')?.hasError('required')"
+            >District is required</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.district')?.hasError('minlength')"
+            >Minimum 3 characters required</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.district')?.hasError('maxlength')"
+            >Maximum 100 characters allowed</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.district')?.hasError('pattern')"
+            >Invalid characters</mat-error
+          >
+        </mat-form-field>
+
+        <!-- State -->
+        <mat-form-field appearance="outline" class="form-field full-width">
+          <mat-label>State</mat-label>
+          <input matInput formControlName="state" />
+          <mat-error
+            *ngIf="resourceForm.get('location.state')?.hasError('required')"
+            >State is required</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.state')?.hasError('minlength')"
+            >Minimum 3 characters required</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.state')?.hasError('maxlength')"
+            >Maximum 100 characters allowed</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.state')?.hasError('pattern')"
+            >Invalid characters</mat-error
+          >
+        </mat-form-field>
+
+        <!-- Country -->
+        <mat-form-field appearance="outline" class="form-field full-width">
+          <mat-label>Country</mat-label>
+          <input matInput formControlName="country" />
+          <mat-error
+            *ngIf="resourceForm.get('location.country')?.hasError('required')"
+            >Country is required</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.country')?.hasError('minlength')"
+            >Minimum 3 characters required</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.country')?.hasError('maxlength')"
+            >Maximum 100 characters allowed</mat-error
+          >
+          <mat-error
+            *ngIf="resourceForm.get('location.country')?.hasError('pattern')"
+            >Invalid characters</mat-error
+          >
+        </mat-form-field>
+      </div>
+    </mat-dialog-content>
+
+    <!-- Dialog Actions -->
+    <div class="dialog-actions-wrapper">
+      <mat-dialog-actions class="dialog-actions">
+        <button
+          mat-raised-button
+          type="button"
+          (click)="onCancel()"
+          class="cancel-button"
+        >
+          Cancel
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!resourceForm.valid"
+          class="submit-button"
+        >
+          Add Resource
+        </button>
+      </mat-dialog-actions>
+    </div>
+  </form>
+</div>

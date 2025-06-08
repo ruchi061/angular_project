@@ -1,0 +1,21 @@
+/* .full-width {
+  width: 100%;
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+} */
+.list-item-content {
+  display: flex;
+  align-items: center;
+}
+
+.item-text {
+  flex: 1;
+  white-space: normal;
+  margin-right: 10px;
+}
+
+.edit-btn {
+  flex-shrink: 0;
+}

@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  /* align-items: center; */
+}
+
+.menu-button {
+  margin-right: 8px;
+}
+
+.flex-spacer {
+  flex: 1;
+}
+
+.search-form-field {
+  width: 30vw;
+  /* color: red; */
+}
+
+.alert-icon {
+  color: white !important;
+}

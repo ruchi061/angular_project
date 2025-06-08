@@ -1,0 +1,38 @@
+<mat-sidenav-container class="sidenav-container" *ngIf="isOpen">
+  <mat-sidenav mode="side" [opened]="isOpen" class="sidenav">
+    <mat-toolbar class="sidebar-header">
+      <mat-icon class="menu-icon" (click)="onCloseClick()">close</mat-icon>
+      <span>Disaster Preparedness</span>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard" class="nav-item">
+        <mat-icon>dashboard</mat-icon>
+        <span class="nav-text">Dashboard</span>
+      </a>
+      <a mat-list-item routerLink="/community" class="nav-item">
+        <mat-icon>chat</mat-icon>
+        <span class="nav-text">Community Group</span>
+      </a>
+
+      <a mat-list-item routerLink="/request" class="nav-item">
+        <mat-icon fontIcon="receipt_long"></mat-icon>
+        <span class="nav-text">Requests</span>
+      </a>
+
+      <a mat-list-item routerLink="/resource-shelter" class="nav-item">
+        <mat-icon fontIcon="home"></mat-icon>
+        <span class="nav-text">Resource/Shelters</span>
+      </a>
+      <a mat-list-item routerLink="/add-guidelines" class="nav-item">
+        <mat-icon fontIcon="assignment"></mat-icon>
+        <span class="nav-text">Add Guidelines</span>
+      </a>
+      <a mat-list-item routerLink="/login" class="nav-item">
+        <mat-icon>login</mat-icon>
+        <span class="nav-text">Login</span>
+      </a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+</mat-sidenav-container>

@@ -1,0 +1,98 @@
+<div class="container mt-4">
+  <mat-card class="mat-elevation-z6 p-4">
+    <h2 class="text-center text-primary fs-3">{{ disasters?.category }}</h2>
+    <p class="text-muted text-center">{{ disasters?.short_description }}</p>
+
+    <mat-card class="mat-elevation-z4 fs-5 mt-3 p-3 bg-info text-white">
+      <strong>Effects:</strong> {{ disasters?.effects }}
+    </mat-card>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <mat-card class="mat-elevation-z4">
+          <mat-card-header
+            class="bg-success text-light p-3 justify-content-center fw-bold fs-4"
+            style="border-radius: 8px 8px 0 0"
+            >Do's</mat-card-header
+          >
+          <mat-list>
+            <mat-list-item
+              *ngFor="let item of disasters?.guidelines?.do; let i = index"
+              class="list-item"
+            >
+              <div class="list-item-content">
+                <span class="item-text">✅ {{ item }}</span>
+                <mat-icon
+                  class="edit-btn text-dark fs-6"
+                  (click)="editDialog('do', item, i)"
+                >
+                  edit
+                </mat-icon>
+              </div>
+            </mat-list-item>
+          </mat-list>
+        </mat-card>
+        <button
+          mat-raised-button
+          color="primary"
+          class="mt-2"
+          (click)="openDialog('do')"
+        >
+          Add Do's
+        </button>
+      </div>
+
+      <div class="col-md-6">
+        <mat-card class="mat-elevation-z3">
+          <mat-card-header
+            class="bg-danger text-light justify-content-center list-item p-3 fw-bold fs-4"
+            style="border-radius: 8px 8px 0 0"
+            >Don't</mat-card-header
+          >
+          <mat-list>
+            <mat-list-item
+              *ngFor="let item of disasters?.guidelines?.dont; let i = index"
+            >
+              <div class="list-item-content">
+                <span class="item-text">❌ {{ item }}</span>
+                <mat-icon
+                  class="edit-btn text-dark fs-6"
+                  (click)="editDialog('dont', item, i)"
+                >
+                edit
+                </mat-icon>
+              </div>
+            </mat-list-item>
+          </mat-list>
+        </mat-card>
+        <button
+          mat-raised-button
+          color="primary"
+          class="mt-2"
+          (click)="openDialog('dont')"
+        >
+          Add Don't
+        </button>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <h4>Watch Guidelines Video</h4>
+      <div *ngIf="embedUrl" class="video-container">
+        <iframe
+          width="560"
+          height="315"
+          [src]="embedUrl"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button mat-raised-button color="accent" (click)="goBack()">Back</button>
+    </div>
+  </mat-card>
+</div>

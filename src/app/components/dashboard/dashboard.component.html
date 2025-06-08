@@ -1,0 +1,25 @@
+<div class="dashboard-container">
+  <div class="dashboard-content">
+    <div class="body-part">
+      <div class="search">
+        <div class="all-categories">
+          <div
+            *ngFor="let item of filteredDisasters$ | async"
+            class="category-card"
+          >
+            <mat-card
+              class="card-2"
+              [attr.data-category]="item.category"
+              (click)="selectedDisaster(item.category)"
+              style="cursor: pointer"
+            >
+              <mat-card-content class="category-name">
+                {{ item.category }}
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

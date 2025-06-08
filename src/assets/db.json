@@ -1,0 +1,214 @@
+[
+  {
+    "resources": [
+      {
+        "name": "Blankets",
+        "quantity": 23,
+        "location": {
+          "street": "East Side, Sector 5, G.T. Road",
+          "district": "New Delhi",
+          "state": "Delhi",
+          "country": "India"
+        },
+        "id": "4"
+      },
+      {
+        "name": "Blankets",
+        "quantity": 23,
+        "location": {
+          "street": "East Side, Sector 5, Vastrapur",
+          "district": "Ahmedabad",
+          "state": "Gujarat",
+          "country": "India"
+        },
+        "id": "4"
+      },
+      {
+        "id": "1218",
+        "name": "Water",
+        "quantity": 1,
+        "location": {
+          "street": "North End, Sector 15, Bodakdev",
+          "district": "Ahmedabad",
+          "state": "Gujarat",
+          "country": "India"
+        }
+      },
+      {
+        "id": "08d6",
+        "name": "mfwm",
+        "quantity": 1,
+        "location": {
+          "street": "West Side, Sector 12",
+          "district": "Noida",
+          "state": "Uttar Pradesh",
+          "country": "India"
+        }
+      },
+      {
+        "id": "51f1",
+        "name": "mfwm",
+        "quantity": 1,
+        "location": {
+          "street": "South End, Phase 3",
+          "district": "Gurgaon",
+          "state": "Haryana",
+          "country": "India"
+        }
+      },
+      {
+        "id": "e062",
+        "name": "efeqf",
+        "quantity": 1,
+        "location": {
+          "street": "Central, MG Road",
+          "district": "Bangalore",
+          "state": "Karnataka",
+          "country": "India"
+        }
+      },
+      {
+        "id": "e2b4",
+        "name": "dqdq",
+        "quantity": 1,
+        "location": {
+          "street": "Hilltop, Sector 10",
+          "district": "Pune",
+          "state": "Maharashtra",
+          "country": "India"
+        }
+      },
+      {
+        "id": "Akshar",
+        "name": "efeqf",
+        "quantity": 1,
+        "location": {
+          "street": "Central, MG Road",
+          "district": "Surat",
+          "state": "Gujarat",
+          "country": "India"
+        }
+      },
+      {
+        "id": "Ak",
+        "name": "dqdq",
+        "quantity": 1,
+        "location": {
+          "street": "Hilltop, Sector 10",
+          "district": "Surat",
+          "state": "Gujarat",
+          "country": "India"
+        }
+      },
+      {
+        "id": "9ddc",
+        "name": "Khushi Shah",
+        "quantity": 1,
+        "location": {
+          "street": "Bamroli Road, Godhra",
+          "district": "PanchMahals",
+          "state": "Gujarat",
+          "country": "India"
+        }
+      }
+    ],
+    "shelters": [
+      {
+        "name": "Hope Shelter",
+        "location": {
+          "street": "West Side, Sector 5, G.T. Road",
+          "district": "New Delhi",
+          "state": "Delhi",
+          "country": "India"
+        },
+        "capacity": 80,
+        "availableBeds": 10,
+        "id": "2"
+      },
+      {
+        "name": "Hope Shelter",
+        "location": {
+          "street": "West Side, Sector 5, Bodakdev",
+          "district": "Ahmedabad",
+          "state": "Gujarat",
+          "country": "India"
+        },
+        "capacity": 80,
+        "availableBeds": 10,
+        "id": "2"
+      },
+      {
+        "id": "3",
+        "name": "Caring Hands Shelter",
+        "location": {
+          "street": "North End, Sector 15, Dwarka",
+          "district": "New Delhi",
+          "state": "Delhi",
+          "country": "India"
+        },
+        "capacity": 50,
+        "availableBeds": 5
+      },
+      {
+        "id": "3",
+        "name": "Caring Hands Shelter",
+        "location": {
+          "street": "North End, Sector 15, Sindhubhavan",
+          "district": "Ahmedabad",
+          "state": "Gujarat",
+          "country": "India"
+        },
+        "capacity": 50,
+        "availableBeds": 5
+      },
+      {
+        "id": "4",
+        "name": "East Side Relief Center",
+        "location": {
+          "street": "East Side, Sector 9, Vikas Nagar",
+          "district": "Lucknow",
+          "state": "Uttar Pradesh",
+          "country": "India"
+        },
+        "capacity": 120,
+        "availableBeds": 35
+      },
+      {
+        "id": "Akshar",
+        "name": "Ak Relief Center",
+        "location": {
+          "street": "Adajan, Vikas Nagar",
+          "district": "Surat",
+          "state": "Gujarat",
+          "country": "India"
+        },
+        "capacity": 120,
+        "availableBeds": 35
+      },
+      {
+        "id": "Parekh",
+        "name": "Vasishtha NGO",
+        "location": {
+          "street": "Amroli, Cross Road",
+          "district": "Surat",
+          "state": "Gujarat",
+          "country": "India"
+        },
+        "capacity": 120,
+        "availableBeds": 35
+      },
+      {
+        "id": "ac78",
+        "name": "Khushi Shah",
+        "capacity": 1,
+        "availableBeds": 1,
+        "location": {
+          "street": "Bamroli Road, Godhra",
+          "district": "wwd",
+          "state": "Gujarat",
+          "country": "India"
+        }
+      }
+    ]
+  }
+]

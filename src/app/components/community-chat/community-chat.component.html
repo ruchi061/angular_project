@@ -1,0 +1,45 @@
+<div class="container-fluid mt-2 class1">
+<div class="col-md-8 chat-area mt-2">
+  <div class="chat-messages">
+    <div *ngFor="let msg of messages" class="message">
+      <div>
+        <strong>{{ msg.username }}</strong>
+        <p>{{ msg.text }}</p>
+        <div>
+
+          <img *ngIf="msg.file && msg.fileType?.startsWith('image')" [src]="msg.file" class="uploaded-file" />
+
+          <video *ngIf="msg.file && msg.fileType?.startsWith('video')" controls class="uploaded-file">
+            <source [src]="msg.file" [type]="msg.fileType">
+            Your browser does not support videos.
+          </video>
+          
+
+          <div *ngIf="msg.file && !msg.fileType?.startsWith('image') && !msg.fileType?.startsWith('video')">
+            <a [href]="msg.file" download>
+              <span style="font-size: 20px;">Download File</span><i class="bi bi-file-earmark-arrow-down-fill" style="font-size: 25px;"></i>
+            </a>
+          </div>
+        </div>
+        <small>{{msg.date | date : 'h:mm a'}}</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="post-box-container" *ngIf="isPostBoxOpen">
+<div class="post-box">
+<textarea [(ngModel)]="newMessage" placeholder="What's on your mind?"></textarea>
+<input type="file" class="form-control form-control-sm bg-body-tertiary" name="formFile" id="formFile"
+      (change)="onFileSelected($event)" />
+<button class="btn btn-primary" (click)="sendMessage($event)">Post</button>
+</div>
+</div>
+
+<button class="floating-btn" (click)="togglePostBox()">
+<i class="fa-solid fa-pen"></i>
+</button>
+
+</div>
+

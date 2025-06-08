@@ -1,0 +1,94 @@
+.sidenav-container {
+  height: 100vh;
+  /* width: auto; */
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #1e293b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* transition: width 0.3s ease; */
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #111827;
+  color: white;
+}
+
+.menu-icon {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+
+.nav-item {
+  color: white !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+
+}
+
+.nav-item mat-icon {
+  margin-right: 10px;
+}
+
+.nav-text {
+  color: white;
+}
+
+.nav-item:hover {
+  background-color: #334155;
+  transition: background 0.3s ease-in-out;
+}
+
+
+.auth-buttons {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-button {
+  justify-content: start;
+  padding: 12px;
+}
+
+.auth-button mat-icon {
+  margin-right: 10px;
+
+}
+mat-icon{
+  color: white;
+}
+
+
+.logout-button {
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.logout-button mat-icon {
+  margin-right: 10px;
+}
+
+.logout-button:hover {
+  background-color: #334155;
+}
